@@ -3,11 +3,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login , logout
 
 # Create your views here.
-def index(request):
-    return render(request,"tutor/index.html")
+# <<<<<<< HEAD
+# =======
 
-def about(request):
-    return render(request,"tutor/about.html")
 
 def user_login(request):
     if request.method == "POST":
@@ -25,3 +23,4 @@ def user_login(request):
 
 
         
+# >>>>>>> 7ff78f83d148b2d33903c23ddfad143efb583b21
