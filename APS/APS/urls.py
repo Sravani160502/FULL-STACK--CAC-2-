@@ -20,5 +20,6 @@ from APS import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('learner.urls')),
+    path('cadmin' , include('cadmin.urls')),
 
 ]
