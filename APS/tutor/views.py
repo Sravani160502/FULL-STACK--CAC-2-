@@ -24,5 +24,10 @@ def user_login(request):
             return render(request , 'tutor/login.html' , {'msg':msg})
     return render(request , 'tutor/login.html')
 
+
+def tutor_register(request):
+    return render(request, 'tutor/register.html')
+
+
         
 
