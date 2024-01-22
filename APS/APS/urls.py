@@ -18,8 +18,9 @@ from django.urls import path,include
 from APS import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('newadmin/', admin.site.urls),
     path('',include('tutor.urls')),
     path('cadmin' , include('cadmin.urls')),
+    path('',include('learner.urls')),
 
 ]

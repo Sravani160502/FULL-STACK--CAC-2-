@@ -2,9 +2,16 @@ from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login , logout
 
+
+def index(request):
+    return render(request,"learner/main/index.html")
+
+def about(request):
+    return render(request,"learner/main/about.html")
+
+def courses(request):
+    return render(request,"learner/main/courses.html")
 # Create your views here.
-# <<<<<<< HEAD
-# =======
 
 
 def user_login(request):
@@ -18,9 +25,5 @@ def user_login(request):
                 return redirect('index')
         elif user is None:
             msg = "Wrong credentials. Please try again!"
-            return render(request , 'tutor/login.html' , {'msg':msg})
-    return render(request , 'tutor/login.html')
-
-
-        
-# >>>>>>> 7ff78f83d148b2d33903c23ddfad143efb583b21
+            return render(request , 'learner/main/login.html' , {'msg':msg})
+    return render(request , 'learner/main/login.html')

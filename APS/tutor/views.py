@@ -4,10 +4,10 @@ from django.contrib.auth import authenticate , login , logout
 
 # Create your views here.
 def index(request):
-    return render(request,"tutor/index.html")
+    return render(request,"tutor/main/index.html")
 
 def about(request):
-    return render(request,"tutor/about.html")
+    return render(request,"tutor/main/about.html")
 
 
 def user_login(request):
@@ -21,12 +21,12 @@ def user_login(request):
                 return redirect('index')
         elif user is None:
             msg = "Wrong credentials. Please try again!"
-            return render(request , 'tutor/login.html' , {'msg':msg})
-    return render(request , 'tutor/login.html')
+            return render(request , 'tutor/main/login.html' , {'msg':msg})
+    return render(request , 'tutor/main/login.html')
 
 
 def tutor_register(request):
-    return render(request, 'tutor/register.html')
+    return render(request, 'tutor/main/register.html')
 
 
         
